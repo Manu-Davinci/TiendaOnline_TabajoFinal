@@ -1,0 +1,56 @@
+body {
+    background-color: #f8f9fa;
+    color: #343a40;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+    border-bottom: 1px solid #e9ecef;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #5B86E5;
+    border-color: #5B86E5;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+.btn-primary:hover {
+    background-color: #4a6fbb;
+    border-color: #4a6fbb;
+}
+
+.list-group-item.active {
+    background-color: #5B86E5;
+    border-color: #5B86E5;
+}
+
+.list-group-item a {
+    text-decoration: none;
+    color: #343a40;
+}
+
+.list-group-item.active a {
+    color: white;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #5B86E5;
+}

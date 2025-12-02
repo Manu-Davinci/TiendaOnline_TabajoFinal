@@ -1,0 +1,14 @@
+{% extends "shop/base.html" %}
+
+{% block title %}Editar perfil{% endblock %}
+
+{% block content %}
+    <h1>Editar tu perfil</h1>
+    <p>Puedes editar tu perfil usando el siguiente formulario:</p>
+    <form method="post" enctype="multipart/form-data">
+        {{ user_form.as_p }}
+        {{ profile_form.as_p }}
+        {% csrf_token %}
+        <p><button type="submit" class="btn btn-primary">Guardar cambios</button></p>
+    </form>
+{% endblock %}

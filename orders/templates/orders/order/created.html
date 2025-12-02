@@ -1,0 +1,12 @@
+{% extends "shop/base.html" %}
+
+{% block title %}
+  Pedido realizado
+{% endblock %}
+
+{% block content %}
+  <h1>¡Gracias!</h1>
+  <p>Tu pedido se ha realizado con éxito.</p>
+  <p>Tu número de pedido es <strong>{{ order.id }}</strong>.</p>
+  <p>En breve recibirás un correo electrónico de confirmación con los detalles de tu pedido.</p>
+{% endblock %}

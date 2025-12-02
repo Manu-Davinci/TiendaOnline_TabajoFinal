@@ -1,0 +1,46 @@
+{% extends "shop/base.html" %}
+
+{% block title %}
+  Detalles del Pedido {{ order.id }}
+{% endblock %}
+
+{% block content %}
+  <h1>Detalles del Pedido {{ order.id }}</h1>
+  <h3>Información del Pedido</h3>
+  <p><strong>Número de Pedido:</strong> {{ order.id }}</p>
+  <p><strong>Fecha:</strong> {{ order.created }}</p>
+  <p><strong>Estado:</strong> {% if order.paid %}Pagado{% else %}Pendiente{% endif %}</p>
+  
+  <h3>Dirección de Envío</h3>
+  <p>{{ order.first_name }} {{ order.last_name }}</p>
+  <p>{{ order.email }}</p>
+  <p>{{ order.address }}</p>
+  <p>{{ order.postal_code }}, {{ order.city }}</p>
+
+  <h3>Productos</h3>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Producto</th>
+        <th>Precio</th>
+        <th>Cantidad</th>
+        <th>Subtotal</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in order.items.all %}
+        <tr>
+          <td>{{ item.product.name }}</td>
+          <td>${{ item.price }}</td>
+          <td>{{ item.quantity }}</td>
+          <td>${{ item.get_cost|floatformat:2 }}</td>
+        </tr>
+      {% endfor %}
+      <tr>
+        <td colspan="3" class="text-end"><strong>Total del Pedido</strong></td>
+        <td><strong>${{ order.get_total_cost|floatformat:2 }}</strong></td>
+      </tr>
+    </tbody>
+  </table>
+  <p><a href="{% url 'orders:user_order_list' %}" class="btn btn-secondary">Volver a Mis Compras</a></p>
+{% endblock %}
