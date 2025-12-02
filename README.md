@@ -133,9 +133,10 @@ Contraseña: admin123
 
 ## 📊 ​Diagramas
 - **Diagrama de casos de uso**:
-
+<img width="11553" height="917" alt="Diagrama de casos de uso" src="https://github.com/user-attachments/assets/8225020f-9d66-4934-b4b6-4df6de156e19" />
 
 - **Diagrama de clases**:
-
+<img width="3383" height="3607" alt="Diagrama de clases" src="https://github.com/user-attachments/assets/e427564e-5c44-4e10-8356-8f0c731ef615" />
 
 - **Diagrama de secuencia**:
+<img width="3702" height="5964" alt="Diagrama de secuencias" src="https://github.com/user-attachments/assets/a41e5774-48d0-4aa0-8e38-3d870f13f2bf" />
